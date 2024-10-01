@@ -1,6 +1,7 @@
 import RoutesProps from '@/interface/route';
 import DefaultLayout from '@/layout/DefaultLayout';
 import Home from '@/views/page/client/Home';
+import ProductDetails from '@/views/page/client/ProductDetails';
 
 const publicRoute: RoutesProps[] = [
   {
@@ -11,7 +12,7 @@ const publicRoute: RoutesProps[] = [
   {
     path: '/product_detail',
     layout: DefaultLayout,
-    page: () => 'day la trang chi tiet san pham',
+    page: ProductDetails,
   },
   {
     path: '/product',
