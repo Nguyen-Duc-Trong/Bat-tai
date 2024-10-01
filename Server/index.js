@@ -1,6 +1,6 @@
-const express = require("express");
-const dotenv = require("dotenv");
-const { Connection } = require("./Database/Connection");
+import express from "express";
+import dotenv from "dotenv";
+import { Connection } from "./Database/Connection.js";
 const app = express();
 dotenv.config();
 Connection();
