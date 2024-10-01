@@ -1,16 +1,15 @@
+
+
 import { useDispatch, useSelector } from "react-redux";
-import { toggleTheme } from "@/store/clientSlice";
-import { RootState } from "@/store/store";
+import { TOGGLE_THEME } from "@/store/actions";
+import { RootState } from "@/store/reducer";
 import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
     const dispatch = useDispatch();
-    const theme = useSelector((state: RootState) => state.client.theme);
-  
-    console.log(theme);
-    
+    const clientClient = useSelector((state: RootState) => state.clientReducer);
     const handleToggleTheme = () => {
-      dispatch(toggleTheme(theme === 'light' ? 'dark' : 'light'));
+        dispatch({ type: TOGGLE_THEME, payload: clientClient.theme == 'light' ? 'dark' : 'light' });
     };
 
     return (
@@ -18,9 +17,10 @@ const Header: React.FC = () => {
             <h1>Header</h1>
             <nav>
                 <ul className="flex space-x-10">
-                    <li><Link to="/">Trang chủ</Link></li>
-                    <li><Link to="/product_detail">Chi tiết sản phẩm</Link></li>
-                    <li><Link to="/product">Sản phẩm</Link></li>
+                    <li><Link to={'/'}>Trang chủ</Link></li>
+                    <li><Link to={'/product_detail'}>Chi tiết sản phẩm</Link></li>
+                    <li><Link to={'/product'}>Sản phẩm</Link></li>
+                    <li><Link to={'/Cart'}>Giỏ hàng</Link></li>
                 </ul>
             </nav>
             <button onClick={handleToggleTheme}>Toggle theme</button>
