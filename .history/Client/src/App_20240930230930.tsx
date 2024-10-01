@@ -1,6 +1,6 @@
-// import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import router from './routes';
-// import { clsx } from 'clsx';
+import { clsx } from 'clsx';
 const App: React.FC = () => {
   // const { theme } = useSelector((store: any) => store.clientReducer);
 
