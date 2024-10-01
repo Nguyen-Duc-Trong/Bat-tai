@@ -1,5 +1,9 @@
 const ProductDetails: React.FC = () => {
-    return <h2>Product Details</h2>
+    return (
+        <div className="max-w-7xl px-4 mx-auto">
+            <h2>con cac</h2>
+        </div>
+    )
 }
 
 export default ProductDetails
